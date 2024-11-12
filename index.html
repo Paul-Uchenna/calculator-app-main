@@ -13,20 +13,33 @@
     />
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body class="theme1">
     <div class="container">
       <header class="header">
         <h2>calc</h2>
         <div class="calc_theme">
           <span>THEME</span>
           <div class="theme_toogle_btn">
-            <input type="checkbox" name="theme1" id="theme1" />
-            <input type="checkbox" name="theme2" id="theme2" />
-            <input type="checkbox" name="theme3" id="theme3" />
+            <div class="theme1">
+              <label for="theme1">1</label>
+              <input type="radio" name="theme" id="theme1" checked />
+            </div>
+
+            <div class="theme2">
+              <label for="theme1">2</label>
+              <input type="radio" name="theme" id="theme2" />
+            </div>
+
+            <div class="theme3">
+              <label for="theme1">3</label>
+              <input type="radio" name="theme" id="theme3" />
+            </div>
           </div>
         </div>
       </header>
+
       <main class="body_calc">
         <input type="text" name="display" />
         <div>
