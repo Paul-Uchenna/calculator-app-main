@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  /* Typography */
+  --font-size-numbers: 25px;
+}
+
+.theme1 {
+  /* Theme 1 */
+
+  --color-main-bg: hsl(222, 26%, 31%);
+  --color-toggle-bg: hsl(223, 31%, 20%);
+  --color-screen-bg: hsl(224, 36%, 15%);
+
+  --color-key-bg: hsl(225, 21%, 49%);
+  --color-key-shadow: hsl(224, 28%, 35%);
+
+  --color-red-key-bg: hsl(6, 63%, 50%);
+  --color-red-key-shadow: hsl(6, 70%, 34%);
+
+  --color-light-orange-key-bg: hsl(30, 25%, 89%);
+  --color-grayish-orange-shadow: hsl(28, 16%, 65%);
+
+  /* Text */
+  --color-dark-text: hsl(221, 14%, 31%);
+  --color-white-text: hsl(0, 0%, 100%);
+
+  --footercolor: hsl(127.87deg 48.8% 50.98%);
+}
+
+.theme2 {
+  /* Theme 2 */
+  --color-main-bg: hsl(0, 0%, 90%);
+  --color-toggle-bg: hsl(0, 5%, 81%);
+  --color-screen-bg: hsl(0, 0%, 93%);
+
+  --color-key-bg: hsl(185, 42%, 37%);
+  --color-key-shadow: hsl(185, 58%, 25%);
+
+  --color-red-key-bg: hsl(25, 98%, 40%);
+  --color-red-key-shadow: hsl(25, 99%, 27%);
+
+  --color-light-orange-key-bg: hsl(45, 7%, 89%);
+  --color-grayish-orange-shadow: hsl(35, 11%, 61%);
+
+  --color-dark-text: hsl(60, 10%, 19%);
+  --color-white-text: hsl(0, 0%, 100%);
+
+  --footercolor: hsl(127.87deg 48.8% 50.98%);
+}
+
+.theme3 {
+  /* Theme 3 */
+  --color-main-bg: hsl(268, 75%, 9%);
+  --color-toggle-bg: hsl(268, 71%, 12%);
+  --color-screen-bg: hsl(268, 71%, 12%);
+
+  --color-key-bg: hsl(281, 89%, 26%);
+  --color-key-shadow: hsl(285, 91%, 52%);
+
+  --color-red-key-bg: hsl(176, 100%, 44%);
+  --color-red-key-shadow: hsl(177, 92%, 70%);
+
+  --color-light-orange-key-bg: hsl(268, 47%, 21%);
+  --color-grayish-orange-shadow: hsl(290, 70%, 36%);
+
+  --color-dark-text: hsl(198, 20%, 13%);
+  --color-white-text: hsl(0, 0%, 100%);
+
+  --footercolor: hsl(127.87deg 48.8% 50.98%);
+}
+
+button,
+input[type="radio"] {
+  outline: none;
+  border: none;
+  accent-color: var(--color-red-key-shadow);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  font: 700 var(--font-size-numbers) "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main-bg);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.attribution {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  color: var(--footercolor);
+  text-decoration: none;
+}
+
+.container {
+  width: 375px;
+  margin-bottom: 65px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h2 {
+  color: var(--color-white-text);
+  font-size: 25px;
+}
+
+.header .calc_theme {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-white-text);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header .calc_theme span {
+  font-weight: 500;
+}
+
+.theme-toogle-btn {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  margin-bottom: 18px;
+}
+
+.theme-option {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* align-items: center; */
+  /* padding: 0px 5px; */
+}
+
+.theme-option .labels label {
+  margin-left: 12px;
+}
+
+.radio-input {
+  margin-top: 5px;
+  background-color: var(--color-toggle-bg);
+  border-radius: 10px;
+  padding: 2px 2px 5px 2px;
+}
+.input-theme {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  transition: background-position 0.15s cubic-bezier(0.8, 0, 1, 1),
+    transform 0.25s cubic-bezier(0.8, 0, 1, 1);
+  -webkit-transition: background-position 0.15s cubic-bezier(0.8, 0, 1, 1),
+    -webkit-transform 0.25s cubic-bezier(0.8, 0, 1, 1);
+}
+
+.input-theme:checked:hover {
+  background-color: var(--color-red-key-bg);
+}
+
+.input-theme:checked {
+  background-color: var(--color-red-key-shadow);
+  transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1),
+    -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.input-theme:active {
+  transform: scale(1.5);
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.body_calc .display {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-white-text);
+  background-color: var(--color-toggle-bg);
+  font-size: var(--font-size-numbers);
+  font-weight: 700;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.body_calc .keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--color-toggle-bg);
+  border-radius: 5px;
+}
+
+.body_calc .keypad button {
+  padding: 15px;
+  font-size: var(--font-size-numbers);
+  font-weight: 700;
+  border-radius: 5px;
+  color: var(--color-dark-text);
+  background-color: var(--color-grayish-orange-shadow);
+}
+
+.body_calc .keypad button:hover {
+  background-color: var(--color-light-orange-key-bg);
+}
+
+.body_calc .keypad .delete-btn,
+.body_calc .keypad .reset-btn {
+  color: var(--color-white-text);
+  background-color: var(--color-key-shadow);
+  transition: background-color 0.2s ease;
+}
+
+.body_calc .keypad .delete-btn:hover,
+.body_calc .keypad .reset-btn:hover {
+  background-color: var(--color-key-bg);
+}
+
+.body_calc .keypad .reset-btn {
+  grid-column: span 2;
+}
+
+.body_calc .keypad .equals-btn {
+  color: var(--color-white-text);
+  background-color: var(--color-red-key-shadow);
+  grid-column: span 2;
+}
+
+.body_calc .keypad .equals-btn:hover {
+  background-color: var(--color-red-key-bg);
+}
