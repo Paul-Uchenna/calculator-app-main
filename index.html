@@ -13,7 +13,7 @@
     />
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body class="theme1">
     <div class="container">
@@ -21,63 +21,60 @@
         <h2>calc</h2>
         <div class="calc_theme">
           <span>THEME</span>
-          <div class="theme_toogle_btn">
-            <div class="theme1">
-              <label for="theme1">1</label>
-              <input type="radio" name="theme" id="theme1" checked />
-            </div>
-
-            <div class="theme2">
-              <label for="theme1">2</label>
-              <input type="radio" name="theme" id="theme2" />
-            </div>
-
-            <div class="theme3">
-              <label for="theme1">3</label>
-              <input type="radio" name="theme" id="theme3" />
+          <div class="theme-toogle-btn">
+            <div class="theme-option">
+              <div class="labels">
+                <label for="theme1">1 </label>
+                <label for="theme2">2</label>
+                <label for="theme3">3</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  name="radio"
+                  type="radio"
+                  class="input-theme"
+                  id="theme1"
+                  checked
+                />
+                <input
+                  name="radio"
+                  type="radio"
+                  class="input-theme"
+                  id="theme2"
+                />
+                <input
+                  name="radio"
+                  type="radio"
+                  class="input-theme"
+                  id="theme3"
+                />
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       <main class="body_calc">
-        <input type="text" name="display" />
-        <div>
-          <button type="button">7</button>
-          <button type="button">B</button>
-          <button type="button">9</button>
-          <button type="button">DEL</button>
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button">+</button>
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button">-</button>
-          <button type="button">.</button>
-          <button type="button">0</button>
-          <button type="button">/</button>
-          <button type="button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-x"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
-            *
-          </button>
-          <button type="button">RESET</button>
-          <button type="button">=</button>
+        <input type="text" name="display" class="display" placeholder="0" />
+        <div class="keypad">
+          <button type="button" class="keypadValue">7</button>
+          <button type="button" class="keypadValue">8</button>
+          <button type="button" class="keypadValue">9</button>
+          <button type="button" class="delete-btn">DEL</button>
+          <button type="button" class="keypadValue">4</button>
+          <button type="button" class="keypadValue">5</button>
+          <button type="button" class="keypadValue">6</button>
+          <button type="button" class="keypadValue">+</button>
+          <button type="button" class="keypadValue">1</button>
+          <button type="button" class="keypadValue">2</button>
+          <button type="button" class="keypadValue">3</button>
+          <button type="button" class="keypadValue">-</button>
+          <button type="button" class="keypadValue">.</button>
+          <button type="button" class="keypadValue">0</button>
+          <button type="button" class="keypadValue">/</button>
+          <button type="button" class="keypadValue">x</button>
+          <button type="button" class="reset-btn">RESET</button>
+          <button type="button" class="equals-btn">=</button>
         </div>
       </main>
     </div>
